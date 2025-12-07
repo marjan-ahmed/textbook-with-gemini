@@ -1,0 +1,136 @@
+.moduleCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: var(--ifm-card-background-color, #fff);
+    border-radius: 0.75rem;
+    border: 1px solid var(--ifm-color-emphasis-200);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.moduleCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    border-color: var(--ifm-color-primary);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.moduleIcon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+}
+
+.moduleIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.moduleTitle {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--ifm-heading-color);
+    margin: 0;
+    line-height: 1.3;
+    flex: 1;
+}
+
+.moduleFocus {
+    font-size: 1rem;
+    color: var(--ifm-color-emphasis-700);
+    margin-bottom: 1.25rem;
+    font-style: italic;
+}
+
+.topicList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex: 1;
+}
+
+.topicList li {
+    padding: 0.625rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--ifm-color-emphasis-800);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.topicList li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--ifm-color-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.moduleLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.moduleLink:hover {
+    color: #fff;
+    text-decoration: none;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Dark mode */
+[data-theme='dark'] .moduleCard {
+    background: var(--ifm-background-surface-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .moduleCard:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .moduleCard {
+        padding: 1.5rem;
+    }
+
+    .moduleTitle {
+        font-size: 1.25rem;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+    }
+
+    .moduleIcon {
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,130 @@
+.timeline {
+    padding: 3rem 0;
+}
+
+.timelineContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timelineItem {
+    display: flex;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.timelineItem:last-child {
+    padding-bottom: 0;
+}
+
+.timelineMarker {
+    position: relative;
+    flex-shrink: 0;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.markerDot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 0 0 4px var(--ifm-background-color), 0 2px 8px rgba(102, 126, 234, 0.4);
+    z-index: 1;
+    position: relative;
+}
+
+.timelineItem:not(:last-child) .timelineMarker::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 2.5rem);
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    opacity: 0.3;
+}
+
+.timelineContent {
+    flex: 1;
+    padding-left: 1.5rem;
+    padding-top: 0;
+}
+
+.weekRange {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ifm-color-primary);
+    margin-bottom: 1rem;
+}
+
+.topicList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topicList li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--ifm-color-emphasis-800);
+    line-height: 1.6;
+}
+
+.topicList li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--ifm-color-primary);
+    font-weight: 600;
+}
+
+/* Hover effects */
+.timelineItem:hover .markerDot {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 0 6px var(--ifm-background-color), 0 4px 12px rgba(102, 126, 234, 0.6);
+}
+
+.timelineItem:hover .weekRange {
+    color: #764ba2;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode */
+[data-theme='dark'] .markerDot {
+    box-shadow: 0 0 0 4px var(--ifm-background-color), 0 2px 8px rgba(102, 126, 234, 0.6);
+}
+
+[data-theme='dark'] .timelineItem:hover .markerDot {
+    box-shadow: 0 0 0 6px var(--ifm-background-color), 0 4px 12px rgba(102, 126, 234, 0.8);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .timelineMarker {
+        width: 30px;
+    }
+
+    .markerDot {
+        width: 14px;
+        height: 14px;
+    }
+
+    .timelineContent {
+        padding-left: 1rem;
+    }
+
+    .weekRange {
+        font-size: 1.1rem;
+    }
+
+    .topicList li {
+        font-size: 0.95rem;
+    }
+}
