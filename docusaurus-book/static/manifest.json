@@ -1,0 +1,16 @@
+{
+  "name": "My Docusaurus Site",
+  "short_name": "Docusaurus",
+  "description": "My Docusaurus documentation site with offline search.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#25c2a0",
+  "icons": [
+    {
+      "src": "/img/docusaurus.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

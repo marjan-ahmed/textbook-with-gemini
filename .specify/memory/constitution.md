@@ -1,55 +1,92 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: None -> 0.1.0
+Modified principles: None
+Added sections: Project Scope & Requirements, Constraints & Goals, Modality
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md: ✅ updated
+- .specify/templates/spec-template.md: ✅ updated
+- .specify/templates/tasks-template.md: ✅ updated
+- .specify/templates/commands/*.md: ✅ updated
+- README.md: ⚠ pending
+Follow-up TODOs: None
+-->
+# AI/Spec-Driven Book Creation — Physical AI & Humanoid Robotics Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Clarity
+All specifications, plans, tasks, and code must be clear and unambiguous, leaving no room for misinterpretation.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Precision
+Exactness in specifications, acceptance criteria, and implementation is paramount.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Reusability
+Design and implement components and solutions that can be reused across different parts of the project or future projects.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Determinism
+All processes, tests, and outputs must be predictable and repeatable, ensuring consistent results.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Zero Ambiguity
+Tasks and acceptance criteria must be defined with absolute clarity, ensuring that their completion can be objectively verified without any uncertainty.
 
-### [PRINCIPLE_6_NAME]
+### Modality
+All outputs must be in markdown format. Code snippets must be fully copy-paste ready for direct use.
 
+## Project Scope & Requirements
 
-[PRINCIPLE__DESCRIPTION]
+### Mission Statement
+Create a multi-chapter educational book using Docusaurus (TypeScript) and deploy it to GitHub Pages. All work is Spec-Driven and produced through iterative cycles using Spec-Kit Plus.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Tech Stack
+- Docusaurus (TypeScript)
+- Node.js + npm
+- GitHub Pages Deployment
+- Gemini CLI as the agentic execution environment
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Primary Domain
+Physical AI, Humanoid Robotics, ROS 2, Gazebo, Unity, NVIDIA Isaac, Vision-Language-Action Robotics.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### SCOPE — ITERATION 1
+- Frontend-only:
+    - Docusaurus project initialization
+    - Home landing page
+    - Use Tailwind CSS for styling
+    - Book structure with chapters & submodules
+    - Written content for all pages
+    - No backend, no automation scripts
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### CONTENT REQUIREMENTS
+- Include 6 Chapters:
+    1. Introduction to Physical AI
+    2. ROS 2: The Robotic Nervous System
+    3. Simulation: Gazebo, Unity & Digital Twins
+    4. NVIDIA Isaac & AI-Powered Robotics
+    5. Vision-Language-Action (VLA)
+    6. Capstone: The Autonomous Humanoid
+- Each chapter must contain 3–5 submodules.
+- The home page must explain the course details, themes, modules, outcomes, and hardware requirements.
+
+## Constraints & Goals
+
+### CONSTRAINTS
+- Must remain fully TypeScript compliant.
+- Everything must be deployable to GitHub Pages.
+- No backend or dynamic API usage.
+- All assets must be local or Docusaurus defaults.
+
+### GOALS
+- Produce:
+    - Specification (/sp.specify)
+    - Plan (/sp.plan)
+    - Tasks (/sp.tasks)
+    - Implementation (/sp.implementation)
+
+### FOLLOW-UP
+- Wait for user to call /sp.specify.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution serves as the foundational document for project development. Amendments require review and approval by the project architect. All changes to the constitution must follow semantic versioning rules. Compliance with these principles will be reviewed as needed, particularly before major releases or significant milestones.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 0.1.0 | **Ratified**: 2025-12-07 | **Last Amended**: 2025-12-07

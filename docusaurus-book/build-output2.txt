@@ -1,0 +1,59 @@
+
+> docusaurus-book@0.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[ERROR] Error while parsing Markdown front matter.
+This can happen if you use special characters in front matter values (try using double quotes around that value).
+[ERROR] Error while parsing Markdown front matter.
+This can happen if you use special characters in front matter values (try using double quotes around that value).
+[ERROR] Loading of version failed for version current
+
+[ERROR] Error: Unable to build website for locale en.
+    at tryToBuildLocale (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\core\lib\commands\build\build.js:83:15)
+    at async E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\core\lib\commands\build\build.js:35:9
+    at async mapAsyncSequential (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\utils\lib\jsUtils.js:21:24)
+    at async Command.build (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\core\lib\commands\build\build.js:34:5)
+    at async Promise.all (index 0)
+    at async runCLI (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\core\lib\commands\cli.js:56:5)
+    at async file:///E:/hackathon-projects/textbook-with-gemini/docusaurus-book/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+  [cause]: Error: Can't process doc metadata for doc at path path=E:\hackathon-projects\textbook-with-gemini\docusaurus-book\docs\ros2-the-robotic-nervous-system\index.mdx in version name=current
+      at processDocMetadata (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\plugin-content-docs\lib\docs.js:152:15)
+      at async Promise.all (index 12)
+      at async loadVersionDocsBase (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\plugin-content-docs\lib\versions\loadVersion.js:63:18)
+      at async doLoadVersion (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\plugin-content-docs\lib\versions\loadVersion.js:72:22)
+      at async loadVersion (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\plugin-content-docs\lib\versions\loadVersion.js:119:16)
+      at async Promise.all (index 0)
+      at async Object.loadContent (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\plugin-content-docs\lib\index.js:152:33)
+      at async E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\core\lib\server\plugins\plugins.js:40:23
+      at async Promise.all (index 1)
+      at async E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\@docusaurus\core\lib\server\plugins\plugins.js:146:25 {
+    [cause]: YAMLException: incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 2, column 15:
+        title: \"ROS 2: The Robotic Nervous System\"
+                      ^
+        at generateError (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:183:10)
+        at throwError (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:189:9)
+        at readBlockMapping (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:1043:9)
+        at composeNode (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:1375:12)
+        at readDocument (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:1541:3)
+        at loadDocuments (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:1604:5)
+        at load (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:1630:19)
+        at Object.safeLoad (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\node_modules\js-yaml\lib\js-yaml\loader.js:1653:10)
+        at module.exports (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\lib\parse.js:12:17)
+        at parseMatter (E:\hackathon-projects\textbook-with-gemini\docusaurus-book\node_modules\gray-matter\index.js:109:17) {
+      reason: 'incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line',
+      mark: Mark {
+        name: null,
+        buffer: '\n' +
+          'title: \\"ROS 2: The Robotic Nervous System\\"\n' +
+          'slug: /ros2-the-robotic-nervous-system\n' +
+          '\x00',
+        position: 15,
+        line: 1,
+        column: 14
+      }
+    }
+  }
+}
+[INFO] Docusaurus version: 3.9.2
+Node version: v22.17.0
